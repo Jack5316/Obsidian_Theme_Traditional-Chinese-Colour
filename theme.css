@@ -48,12 +48,66 @@ body {
 	--titlebar-background-focused: var(--color-base-20);
 	--tab-container-background: var(--color-base-10);
 	--tab-divider-color: var(--color-base-30);
-	--workspace-divider-color: var(--color-base-30);
 	--scrollbar-bg: var(--color-base-10);
 	--scrollbar-thumb-bg: var(--color-base-35);
 	--scrollbar-active-thumb-bg: var(--color-base-50);
-	--selection-background: var(--color-selection);
+	--text-selection: var(--color-selection);
+	--text-highlight-bg: var(--color-selection);
 	--highlight-mix-blend-mode: normal;
+	--h1-color: var(--color-red);
+	--h2-color: var(--color-blue);
+	--h3-color: var(--color-green);
+	--h4-color: var(--color-orange);
+	--h5-color: var(--color-mauve);
+	--h6-color: var(--text-muted);
+	--h1-weight: 700;
+	--h2-weight: 700;
+	--h3-weight: 700;
+	--h4-weight: 700;
+	--h5-weight: 700;
+	--h6-weight: 700;
+	--blockquote-border-color: var(--color-red);
+	--blockquote-border-thickness: 4px;
+	--blockquote-background-color: var(--color-accent-soft);
+	--blockquote-color: var(--text-normal);
+	--hr-color: var(--color-red);
+	--hr-thickness: 1px;
+	--tag-color: var(--color-red);
+	--tag-color-hover: var(--text-on-accent);
+	--tag-background: var(--color-accent-soft);
+	--tag-background-hover: var(--color-red);
+	--tag-border-color: var(--color-red);
+	--tag-border-color-hover: var(--color-red);
+	--tag-border-width: 1px;
+	--tag-radius: var(--radius-s);
+	--tag-padding-x: 0.35em;
+	--tag-padding-y: 0.05em;
+	--code-border-color: var(--color-base-30);
+	--code-border-width: 1px;
+	--code-radius: var(--radius-m);
+	--graph-line: var(--color-graph-line);
+	--graph-node: var(--color-graph-node);
+	--graph-node-unresolved: var(--color-graph-node-unresolved);
+	--graph-node-focused: var(--color-accent);
+	--graph-node-tag: var(--color-green);
+	--graph-text: var(--text-normal);
+	--canvas-background: var(--color-canvas-background);
+	--canvas-dot-pattern: var(--color-base-30);
+	--callout-border-width: 1px;
+	--callout-default: var(--color-azurite);
+	--callout-info: var(--color-azurite);
+	--callout-summary: var(--color-azurite);
+	--callout-todo: var(--color-azurite);
+	--callout-tip: var(--color-malachite);
+	--callout-success: var(--color-malachite);
+	--callout-warning: var(--color-yellow-imperial);
+	--callout-error: var(--color-red);
+	--callout-fail: var(--color-red);
+	--callout-bug: var(--color-red);
+	--callout-important: var(--color-red);
+	--callout-question: var(--color-ochre);
+	--callout-example: var(--color-mauve);
+	--callout-quote: var(--color-base-60);
 	--code-background: var(--color-code-background);
 	--code-normal: var(--color-base-100);
 	--code-comment: var(--color-base-60);
@@ -72,11 +126,17 @@ body {
 	--link-unresolved-color: var(--color-rouge);
 	--link-unresolved-opacity: 0.85;
 	--table-header-background: var(--color-azurite-soft);
+	--table-header-background-hover: var(--color-azurite-soft);
+	--table-header-border-width: 1px;
+	--table-header-border-color: var(--color-base-25);
 	--table-header-color: var(--text-normal);
+	--table-background: transparent;
 	--table-row-alt-background: var(--color-base-10);
+	--table-row-alt-background-hover: var(--color-accent-soft);
 	--table-row-background-hover: var(--color-accent-soft);
+	--table-text-color: var(--text-normal);
+	--table-border-width: 1px;
 	--table-border-color: var(--color-base-25);
-	--table-cell-padding: 0.5em 0.7em;
 	--table-header-weight: 700;
 	--checkbox-color: var(--color-accent);
 	--checkbox-color-hover: var(--color-accent-hover);
@@ -87,53 +147,18 @@ body {
 }
 
 body.theme-light {
-	/* 朱红 cinnabar / palace wall red */
-
-	--color-red: #C3272B;
-
-	/* 胭脂 rouge */
-
-	--color-rouge: #9D2933;
-
-	/* 琉璃黄 glazed imperial yellow */
-
-	--color-yellow-imperial: #E9B949;
-
-	/* 赭石 ochre */
-
-	--color-ochre: #955539;
-
-	/* 石青 azurite blue */
-
-	--color-azurite: #1661AB;
-
-	/* 靛青 indigo */
-
-	--color-indigo: #2E4E7E;
-
-	/* 石绿 malachite green */
-
-	--color-malachite: #1B813E;
-
-	/* 秘色 celadon */
-
-	--color-celadon: #7FB3A0;
-
-	/* 藕荷 lotus-root mauve */
-
-	--color-mauve: #B57D9C;
-
-	/* 宣纸 paper ivory */
-
-	--color-paper: #F7F3E9;
-
-	/* 月白 moon white */
-
-	--color-moon-white: #EEF3EE;
-
-	/* 墨 ink */
-
-	--color-ink: #16110F;
+	--color-red: #C3272B; /* 朱红 cinnabar */
+	--color-rouge: #9D2933; /* 胭脂 rouge */
+	--color-yellow-imperial: #E9B949; /* 琉璃黄 imperial yellow */
+	--color-ochre: #955539; /* 赭石 ochre */
+	--color-azurite: #1661AB; /* 石青 azurite blue */
+	--color-indigo: #2E4E7E; /* 靛青 indigo */
+	--color-malachite: #1B813E; /* 石绿 malachite green */
+	--color-celadon: #7FB3A0; /* 秘色 celadon */
+	--color-mauve: #B57D9C; /* 藕荷 lotus-root mauve */
+	--color-paper: #F7F3E9; /* 宣纸 paper ivory */
+	--color-moon-white: #EEF3EE; /* 月白 moon white */
+	--color-ink: #16110F; /* 墨 ink */
 	--color-base-00: #F7F3E9;
 	--color-base-10: #F1EBDD;
 	--color-base-20: #E8E0CE;
@@ -165,61 +190,21 @@ body.theme-light {
 	--color-graph-node: #1661AB;
 	--color-graph-node-unresolved: #9A8A6E;
 	--color-canvas-background: #F1EBDD;
-	--callout-azurite: 22, 97, 171;
-	--callout-malachite: 27, 129, 62;
-	--callout-imperial-yellow: 233, 185, 73;
-	--callout-cinnabar: 195, 39, 43;
-	--callout-mauve: 181, 125, 156;
 }
 
 body.theme-dark {
-	/* 朱红 cinnabar / palace wall red */
-
-	--color-red: #E0574F;
-
-	/* 胭脂 rouge */
-
-	--color-rouge: #D46A70;
-
-	/* 琉璃黄 glazed imperial yellow */
-
-	--color-yellow-imperial: #E9B949;
-
-	/* 赭石 ochre */
-
-	--color-ochre: #C98A4B;
-
-	/* 石青 azurite blue */
-
-	--color-azurite: #5C9BD6;
-
-	/* 靛青 indigo */
-
-	--color-indigo: #7897C2;
-
-	/* 石绿 malachite green */
-
-	--color-malachite: #4FA96A;
-
-	/* 秘色 celadon */
-
-	--color-celadon: #6FB8AE;
-
-	/* 藕荷 lotus-root mauve */
-
-	--color-mauve: #B58BC2;
-
-	/* 宣纸 paper ivory */
-
-	--color-paper: #F2E8D8;
-
-	/* 月白 moon white */
-
-	--color-moon-white: #EEF3EE;
-
-	/* 墨 ink */
-
-	--color-ink: #16110F;
+	--color-red: #E0574F; /* 朱红 cinnabar */
+	--color-rouge: #D46A70; /* 胭脂 rouge */
+	--color-yellow-imperial: #E9B949; /* 琉璃黄 imperial yellow */
+	--color-ochre: #C98A4B; /* 赭石 ochre */
+	--color-azurite: #5C9BD6; /* 石青 azurite blue */
+	--color-indigo: #7897C2; /* 靛青 indigo */
+	--color-malachite: #4FA96A; /* 石绿 malachite green */
+	--color-celadon: #6FB8AE; /* 秘色 celadon */
+	--color-mauve: #B58BC2; /* 藕荷 lotus-root mauve */
+	--color-paper: #F2E8D8; /* 宣纸 paper ivory */
+	--color-moon-white: #EEF3EE; /* 月白 moon white */
+	--color-ink: #16110F; /* 墨 ink */
 	--color-base-00: #16110F;
 	--color-base-10: #1C1614;
 	--color-base-20: #241C19;
@@ -251,11 +236,6 @@ body.theme-dark {
 	--color-graph-node: #E9B949;
 	--color-graph-node-unresolved: #8E7767;
 	--color-canvas-background: #1C1614;
-	--callout-azurite: 92, 155, 214;
-	--callout-malachite: 79, 169, 106;
-	--callout-imperial-yellow: 233, 185, 73;
-	--callout-cinnabar: 224, 87, 79;
-	--callout-mauve: 181, 139, 194;
 }
 
 body {
@@ -336,7 +316,7 @@ body,
 
 .workspace-leaf-resize-handle,
 .workspace-split.mod-root > .workspace-leaf-resize-handle {
-	background-color: var(--workspace-divider-color);
+	background-color: var(--divider-color);
 }
 
 .nav-folder-title,
@@ -408,49 +388,9 @@ body,
 	padding-top: 1.5em;
 }
 
-.markdown-preview-view h1,
-.markdown-source-view .cm-header-1 {
-	color: var(--color-red);
-}
-
 .markdown-preview-view h1 {
 	padding-bottom: 0.25em;
 	border-bottom: 1px solid var(--color-red);
-}
-
-.markdown-preview-view h2,
-.markdown-source-view .cm-header-2 {
-	color: var(--color-blue);
-}
-
-.markdown-preview-view h3,
-.markdown-source-view .cm-header-3 {
-	color: var(--color-green);
-}
-
-.markdown-preview-view h4,
-.markdown-source-view .cm-header-4 {
-	color: var(--color-orange);
-}
-
-.markdown-preview-view h5,
-.markdown-source-view .cm-header-5 {
-	color: var(--color-mauve);
-}
-
-.markdown-preview-view h6,
-.markdown-source-view .cm-header-6 {
-	color: var(--text-muted);
-}
-
-.markdown-preview-view h1,
-.markdown-preview-view h2,
-.markdown-preview-view h3,
-.markdown-preview-view h4,
-.markdown-preview-view h5,
-.markdown-preview-view h6 {
-	font-weight: 700;
-	line-height: var(--line-height-tight);
 }
 
 .markdown-preview-view p,
@@ -470,82 +410,13 @@ body,
 	color: var(--color-purple);
 }
 
-.markdown-preview-view mark,
-.cm-highlight {
-	background-color: var(--color-selection);
-	color: var(--text-normal);
-	padding: 0 0.15em;
-	border-radius: var(--radius-s);
-}
-
-.tag {
-	background-color: var(--color-accent-soft);
-	border: 1px solid var(--color-red);
-	border-radius: var(--radius-s);
-	color: var(--color-red);
-	padding: 0.05em 0.35em;
-}
-
-.tag:hover {
-	background-color: var(--color-red);
-	color: var(--text-on-accent);
-}
-
-code,
-.cm-inline-code {
-	background-color: var(--color-code-background);
-	border: 1px solid var(--color-base-30);
-	border-radius: var(--radius-s);
-	color: var(--color-ochre);
-	padding: 0.1em 0.3em;
-}
-
 /* stylelint-disable selector-class-pattern */
 pre,
 .cm-preview-code-block,
 .HyperMD-codeblock {
-	background-color: var(--color-code-background);
-	border: 1px solid var(--color-base-30);
 	border-left: 3px solid var(--color-indigo);
-	border-radius: var(--radius-m);
 }
 /* stylelint-enable selector-class-pattern */
-
-pre code {
-	background-color: transparent;
-	border: 0;
-	color: var(--code-normal);
-}
-
-.markdown-preview-view blockquote,
-.cm-quote {
-	background-color: var(--color-accent-soft);
-	border-left: 4px solid var(--color-red);
-	color: var(--text-normal);
-	margin-inline: 0;
-	padding: 0.65em 1em;
-}
-
-.markdown-preview-view blockquote p {
-	margin: 0.35em 0;
-}
-
-hr {
-	border: 0;
-	border-top: 1px solid var(--color-red);
-	height: 3px;
-	margin: 1.8em 0;
-	position: relative;
-}
-
-hr::after {
-	border-top: 1px solid var(--color-yellow);
-	content: "";
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 2px;
-}
 
 .markdown-preview-view ul > li::marker {
 	color: var(--color-red);
@@ -571,57 +442,7 @@ hr::after {
 	width: 100%;
 }
 
-.callout[data-callout="note"],
-.callout[data-callout="info"] {
-	--callout-color: var(--callout-azurite);
-}
-
-.callout[data-callout="tip"],
-.callout[data-callout="success"],
-.callout[data-callout="todo"] {
-	--callout-color: var(--callout-malachite);
-}
-
-.callout[data-callout="warning"],
-.callout[data-callout="caution"] {
-	--callout-color: var(--callout-imperial-yellow);
-}
-
-.callout[data-callout="danger"],
-.callout[data-callout="error"] {
-	--callout-color: var(--callout-cinnabar);
-}
-
-.callout[data-callout="quote"],
-.callout[data-callout="cite"] {
-	--callout-color: var(--callout-mauve);
-}
-
-.graph-view {
-	background-color: var(--color-canvas-background);
-}
-
-.graph-view .links {
-	stroke: var(--color-graph-line);
-	stroke-opacity: 0.7;
-}
-
-.graph-view .nodes {
-	fill: var(--color-graph-node);
-	stroke: var(--color-graph-node);
-}
-
-.graph-view .unresolved {
-	fill: var(--color-graph-node-unresolved);
-	stroke: var(--color-graph-node-unresolved);
-}
-
-.canvas-wrapper {
-	background-color: var(--color-canvas-background);
-}
-
 .canvas-node {
-	background-color: var(--background-primary);
 	border: 1px solid var(--color-base-35);
 	border-radius: var(--radius-m);
 	box-shadow: 0 3px 10px #16110F26;
@@ -638,7 +459,7 @@ hr::after {
 .markdown-preview-view ::selection,
 .cm-s-obsidian .cm-selectionBackground,
 .cm-s-obsidian .cm-content ::selection {
-	background-color: var(--color-selection);
+	background-color: var(--text-selection);
 }
 
 .cm-s-obsidian .cm-cursor {

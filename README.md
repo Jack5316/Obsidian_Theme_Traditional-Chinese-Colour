@@ -1,0 +1,1 @@
+# Obsidian_Theme_Traditional-Chinese-Colour
